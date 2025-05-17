@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -20,61 +23,117 @@
        
 
 <!--links de navegacion-->
-        <nav class="navegadores"> 
-    <ul class="enlaces">
-         <!--lista con enlaces relativos, navegan dentro del sitio-->
-         <li><a href="../index.html" class="activo">Inicio</a></li>
-        <li><a href="./eventos.html">Eventos</a></li>
-        <li><a href="./talleres.html">Talleres</a></li>
-        <li><a href="./encontranos.html">Encontranos</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">Bocanada</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./eventos.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./talleres.html">Talleres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./encontranos.html">Encontranos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
+
 </div>
     </header>
     <main>
     <section> <!--comienzo de seccion + titulo de la seccion-->
-    <h2 class="tituloSeccion">Elegí lo que se adatpe mas a vos</h2>
-    <p>Aqui podes encontrar todos los eventos disponibles mes a mes</p>
-        <!-- Contenedor para hacer el video responsive -->
-<div class="videoContainer">
-  <iframe 
-    src="https://www.youtube.com/embed/B0wcl1aGQFg?si=q0TJCcG3-5VIHqUG"
-    title="Video torneo Bocanada"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<div class="videoContainer">
-  <iframe 
-    src="https://www.youtube.com/embed/HTn9oh_WMWc?si=pbwEOiUqGIEM7njy"
-    title="Video torneo Bocanada 2"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
-<div class="videoContainer">
-  <iframe src="https://www.youtube.com/watch?v=VZryx_xS1EA"
-  title="video torneo bocanada 3"
-   frameborder="0"
-   allowfullscreen>
- </iframe>
-</div>
-
-<div class="videoContainer">
-  <iframe src="https://www.youtube.com/watch?v=uzR0l-jHNos"
-  title="video festejo bocanada 1"
-  frameborder="0"
-  allowfullscreen></iframe>
-</div>
-      <article><p><span class="destacado">ÉSTA SEMANA HAY TORNEO</span>, SUMATE!!!</p></article>
-    </section>
-        <section>
+    <h2 class="tituloSeccion">Eventos</h2>
+    <p>
+      Elegí el evento que mas se adapte a tus deseos y no dudes en sumarte</p>
+      
+      <article><p><a href="mailto:maritzx@gmail.com?subject=Quiero%20anotarme&body=Hola%2C%20me%20interesa%20participar%20en%20las%20actividades%20de%20Bocanada.%20¿Me%20podrías%20dar%20más%20información%3F"><span class="destacado">ÉSTA SEMANA HAY TORNEO DE PING PONG</span>, SUMATE!!!</p></a></article>
+           
 <h3 class="tituloSubseccion">Aca podes ver los videos de torneos anteriores</h3> 
-<iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/B0wcl1aGQFg?si=q0TJCcG3-5VIHqUG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe class="videos" width="560" height="315" src="https://www.youtube.com/embed/HTn9oh_WMWc?si=pbwEOiUqGIEM7njy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
+  <!-- Contenedor para hacer el video responsive -->
+
+<section class="galeriaVideos">
+  <h3 class="tituloSubseccion">Galeria de videos</h3>
+
+  <div class="videoGrid">
+    <div class="videoItem">
+      <iframe src="https://www.youtube.com/embed/B0wcl1aGQFg" title="Video torneo 1" allowfullscreen></iframe>
+    </div>
+    <div class="videoItem">
+      <iframe src="https://www.youtube.com/embed/HTn9oh_WMWc" title="Video torneo 2" allowfullscreen></iframe>
+    </div>
+    <div class="videoItem">
+      <iframe src="https://www.youtube.com/embed/AQUI_TU_VIDEO_ID3" title="Video torneo 3" allowfullscreen></iframe>
+    </div>
+    <div class="videoItem">
+      <iframe src="https://www.youtube.com/embed/AQUI_TU_VIDEO_ID4" title="Video torneo 4" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+
+  <h2>Galeria de imagenes</h2>
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/foto-futbol1.jpg" class="d-block w-100" alt="foto-futbol-1">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/foto-futbol2.jpg" class="d-block w-100" alt="foto-futbol-2">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/foto-evento.jpg" class="d-block w-100" alt="foto-evento">
+    </div>
+<div class="carousel-item">
+  <img src="../images/foto-evento2.jpg" alt="foto-evento2">
+</div>
+<div class="carousel-item">
+  <img src="../images/foto-evento3.jpg" alt="foto-evento3">
+</div>
+<div class="carousel-item">
+  <img src="../images/foto-ping-pong-1.jpg" alt="foto-ping-pong">
+</div>
+<div class="carousel-item">
+  <img src="../images/foto-ping-pong-2.jpg" alt="foto-ping-pong2">
+</div>   
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    
+
+</section>
   </main>
     <!--pie de pagina con la fecha y redes sociales-->
 <footer>
@@ -95,5 +154,6 @@
     <a href="mailto:info@bocannada.com.ar" target="_blank">info@bocannada.com.ar</a>
   </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
