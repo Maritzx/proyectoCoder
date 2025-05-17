@@ -1,0 +1,409 @@
+
+/*REset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+/* Paleta de colores Bocanada 
+
+Fucsia base	
+#f84ca2
+Amarillo humo	
+#fcee6e
+Azul eléctrico	
+#24ccf3
+Azul oscuro (ropa)	
+#0d1b86
+Cian intermedio	
+#1a80c7
+ */
+  
+
+  body {
+    font-family: "Merriweather Sans", sans-serif;
+    background-image: url(../images/cerati1.JPG);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-color:  #f84ca2;
+    
+  }
+  
+  /* Header */
+  header {
+    background-color: black;
+   
+  
+  }
+  
+  .logo {
+   width: 10%;
+   height: auto;
+   border-radius: 10%;
+   margin: 0 30px 0px 30px;
+   
+  }
+  
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 300;
+  }
+  
+  /* Navegación */
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 2px #4e6b5e;
+   
+  }
+  
+
+
+  
+  /* Texto */
+  p {
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2rem black;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: black;
+    padding: 2rem;
+    color: #f73cb6;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0%;
+  }
+
+  /*Clases */
+
+
+/*iconos de redes sociales*/
+
+.redesSociales  {
+display: flex;
+justify-content: center;
+gap: 1rem;
+  
+ 
+  
+
+}
+  .iconoRedSocial {
+    display: flex;
+   justify-content: space-around;
+   align-items: end;
+    width: 50px;
+    height: auto;
+    
+  }
+    /* aca voy a trabajar con el contenedor de las imagenes*/
+    .imagenSeparadora {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%; /*que ocupe todo el ancho disponible*/
+   padding: 1rem;
+   
+    }
+/*aca voy a trabajar sobre las imagenes*/
+    .imagenSeparadora img {
+width: 600px;
+height: auto;
+border-radius: 10px;
+
+    }
+
+    .tituloSeccion {
+      margin: 10px 10px;
+        font-size: x-large;
+        text-align: center;
+      
+        
+    }
+
+    .destacado {
+      color: #FFB000;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 1);
+     
+    }
+    .videosEventos {
+      width: min-content;
+    }
+
+    .imagenTeatro {
+      height: 400px;
+      width:auto
+    }
+ .enlaces {
+  display: flex;
+  flex: auto;
+  justify-content: space-around;
+  margin: 0%;
+  box-sizing: border-box;
+  
+}
+
+  .encabezado {
+    background-color: #4e6b5e;
+    padding: 1rem;
+    color: white;
+}
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+/* Encabezado y títulos */
+.tituloPrincipal {
+  color: #fcee6e;/* Amarillo humo */
+  margin-left: 1rem;
+  font-size: 3rem;
+  flex-grow: 1;
+  font-weight: bolder;
+  
+}
+
+.navegadores .enlaces {
+  list-style: none;
+display: flex;
+gap: 1rem;
+padding:  0.5rem 1rem;;
+margin: 0;
+background-color: transparent;
+
+}
+/* Enlaces del nav */
+.navegadores .enlaces li a {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  color:  #fcee6e; /* amarillo humo */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  
+}
+
+.logoLetras {
+  width:300px;
+  height: auto;
+  display: flex;
+  justify-content:space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+.logo .logoLetras {
+
+  display: flex;
+  justify-content: space-between;
+}
+.infoBocannada a {
+  color: #f73cb6;
+  margin: 0;
+
+}
+h4 {
+  margin: 20px;
+}
+.quienesSomos, .nuestraMision {
+  background-color: rgba(245, 245, 220, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+p, h1, h2, h3 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+h1, h2, h3, h4 {
+  color: hwb(60 54% 3%); /* beige claro */
+  text-shadow:#00135E 10px 0 20px;
+  
+  
+}
+
+/* contactoo*/
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+  background-color:rgba(255, 255, 255, 0.85) ;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: o.5rem;
+  color:#0d1b86;
+}
+
+input, textarea {
+  padding:0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #f84ca2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+button:hover {
+  background-color: #c23d85;
+}
+
+.parrafoContacto {
+  background-color: rgba(245, 245, 220, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  
+}
+.tituloSeccion  {
+  color: hwb(60 54% 3%); /* beige claro */
+  
+  
+}
+.encabezadoSubtitulo {
+font-size: larger;
+font-weight: bold;
+  display: flex;
+  justify-content:center;
+}
+
+/* Página de talleres */
+
+/* Contenedor principal de Grid */
+
+/* responsive para tablets */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Dos columnas para talleres y una para el banner */
+  grid-template-rows: 250px 250px; /* Dos filas */
+  grid-template-areas:
+    "huerta planificacion banner"
+    "carpinteria teatro banner";
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  border: 1px solid red;
+}
+
+/* areas */
+.huerta {
+  grid-area: huerta;
+  background-image: url('../images/huertaUrbana.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.planificacion {
+  grid-area: planificacion;
+  background-image: url('../images/planificacionHuerta.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.carpinteria {
+  grid-area: carpinteria;
+  background-image: url('../images/carpinteria.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.teatro {
+  grid-area: teatro;
+  background-image: url('../images/teatro.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Banner ocupa toda la altura a la derecha */
+.banner {
+  grid-area: banner;
+  background-image: url('../images/bannerClickme2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: 40px;
+  
+  
+}
+.textoCard {
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid blue;
+  padding: 20px;
+
+
+  
+ 
+}
+
+/*
+.gridTalleres {
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 300px;
+height: auto;
+border: 1px solid red;
+
+  
+}
+
+.gridBanner {
+display: flex;
+border: 1px solid blue;
+width: 100%;
+}  */
