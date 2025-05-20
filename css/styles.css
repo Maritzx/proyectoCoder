@@ -7,8 +7,6 @@
 
 }
 
-
-
 /* Paleta de colores Bocanada 
 
 Fucsia base	
@@ -57,7 +55,7 @@ Cian intermedio
   h1 {
     font-size: 60px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 200px;
   }
   
   /* Navegación */
@@ -70,16 +68,9 @@ Cian intermedio
   }
   
 
-
   
   /* Texto */
-  p {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-    text-shadow: 2rem black;
-    text-transform: uppercase;
-  }
+  
   
   /* Footer */
   footer {
@@ -91,8 +82,7 @@ Cian intermedio
     margin: 0%;
   }
 
-  /*Clases */
-
+  /*Clases generales*/
 
 /*iconos de redes sociales*/
 
@@ -113,29 +103,19 @@ gap: 1rem;
     height: auto;
     
   }
-    /* aca voy a trabajar con el contenedor de las imagenes*/
-    .imagenSeparadora {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   width: 100%; /*que ocupe todo el ancho disponible*/
-   padding: 1rem;
-   
-    }
-/*aca voy a trabajar sobre las imagenes*/
-    .imagenSeparadora img {
-width: 600px;
-height: auto;
-border-radius: 10px;
-
-    }
 
 .tituloSeccion {
-  margin: 10px 10px;
-  font-size: 100PX;
+
+  font-size: 2rem;
   text-align: center;
   color: hwb(60 54% 3%); /* beige claro */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+ 
+}
+.tituloSubseccion {
+  color: #00135E;
+  background-color: rgba(245, 245, 220, 0.85);
+  box-shadow: 0 0 10px black;
+  
 }
 
     .destacado {
@@ -144,9 +124,7 @@ border-radius: 10px;
       background-color: rgba(0, 0, 0, 1);
      
     }
-    .videosEventos {
-      width: min-content;
-    }
+    
 
     .imagenTeatro {
       height: 400px;
@@ -175,14 +153,18 @@ border-radius: 10px;
 }
 /* Encabezado y títulos */
 .tituloPrincipal {
-  color: #fcee6e;/* Amarillo humo */
+  color: #0d1b86;
   margin-left: 1rem;
   font-size: 3rem;
   flex-grow: 1;
   font-weight: bolder;
   
+  
 }
-
+p {
+  background-color: rgba(245, 245, 220, 0.85);
+  box-shadow: 0 0 10px black;
+}
 .navegadores .enlaces {
   list-style: none;
 display: flex;
@@ -215,11 +197,7 @@ background-color: transparent;
   margin-right: 10px;
 
 }
-.logo .logoLetras {
 
-  display: flex;
-  justify-content: space-between;
-}
 .infoBocannada a {
   color: #f73cb6;
   margin: 0;
@@ -235,12 +213,97 @@ h4 {
   margin: 1rem auto;
   max-width: 900px;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-p, h1, h2, h3 {
+ h1, h2, h3 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  
 }
+
+.gridInicio {
+ 
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "titulo parrafo imagen1"
+    "imagen2 parrafo imagen1"
+    "imagen2 parrafo imagen1";
+  gap: 1rem;
+  max-width: 1800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  align-items: start;
+  border: 2px solid yellow;
+  height: auto;
+  min-height: 400px;
+  width: 100%;
+ background-color: rgba(245, 245, 220, 0.85);
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.tituloGrid {
+  grid-area: titulo;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0d1b86;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.parrafoQuienes {
+  grid-area: parrafo;
+
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  
+}
+
+.imagen1 {
+  grid-area: imagen1;
+  background-image: url('../images/imagenClub.jfif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  min-height: 100%;
+
+}
+
+.imagen2 {
+  grid-area: imagen2;
+  background-image: url('../images/terraza.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  min-height: 100%;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  .gridInicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "titulo"
+      "parrafo"
+      "imagen2"
+      "imagen1";
+  }
+
+  .imagen1, .imagen2 {
+    min-height: 200px;
+  }
+   .parrafoQuienes {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
 
 /* contactoo*/
 .formulario{
@@ -261,7 +324,7 @@ p, h1, h2, h3 {
 
 label {
   font-weight: bold;
-  margin-bottom: o.5rem;
+  margin-bottom: 0.5rem;
   color:#0d1b86;
 }
 
@@ -304,35 +367,42 @@ button:hover {
 .encabezadoSubtitulo {
 font-size: larger;
 font-weight: bold;
-  display: flex;
-  justify-content:center;
+display: flex;
+justify-content:center;
+font-size: 2rem;
+color: #fcee6e;
 }
 
 /* Página de talleres */
 
 /* Contenedor principal de Grid */
 
-
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Dos columnas para talleres y una para el banner */
-  grid-template-rows: 250px 250px; /* Dos filas */
+  grid-template-columns:repeat(3 , 1fr) ;/* 3 columnas iguales*/
+  grid-template-rows: repeat(2, 300px); /* Dos filas */
   grid-template-areas:
     "huerta planificacion banner"
     "carpinteria teatro banner";
   gap: 20px;
   width: 90%;
   margin: auto;
-  border: 1px solid red;
+ 
+  
 }
 
-/* areas */
+/* defino las areas */
 .huerta {
   grid-area: huerta;
   background-image: url('../images/huertaUrbana.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .planificacion {
@@ -341,7 +411,13 @@ font-weight: bold;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+   position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
 }
+
 
 .carpinteria {
   grid-area: carpinteria;
@@ -349,6 +425,8 @@ font-weight: bold;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .teatro {
@@ -357,33 +435,85 @@ font-weight: bold;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+
 }
 
 /* Banner ocupa toda la altura a la derecha */
-.banner {
+.bannerLink {
   grid-area: banner;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.bannerFull {
+  width: 100%;
+  height: 100%;
   background-image: url('../images/bannerClickme2.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  border: 1px solid black;
-  width: 80%;
-  margin-left: 40px;
-  
+  transition: transform 0.3s ease-in-out;
   
 }
-.textoCard {
-  font-weight: bold;
-  text-transform: uppercase;
-  border: 1px solid blue;
-  padding: 20px;
 
+.bannerFull:hover {
+  transform: scale(1.02);
+}
+
+
+.textoCard { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-weight: bolder;
+  text-align: end;
+  color: #0d1b86;
+  text-transform: uppercase;
+ 
+  padding: 1rem;
 
   
  
 }
 
 /* eventos */
+.tituloEventos {
+  color: #0d1b86;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.seccionEvento {
+  background-color: rgba(245, 245, 220, 0.85); 
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.articuloEvento h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fcee6e; /* Amarillo humo */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+
+.parrafoEvento {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #111;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.2);
+  padding: 1rem;
+}
 
 /* videos responsive 2x2 */
 .videoGrid {
@@ -421,4 +551,105 @@ font-weight: bold;
 h2 {
    color: hwb(60 54% 3%); /* beige claro */
   text-shadow:#00135E 10px 0 20px;
+}
+
+
+.carouselWrapper {
+  max-width: 600px;     
+  margin: 2rem auto;          
+  overflow: hidden;      
+}
+
+
+  .carouselWrapper .carousel-inner img {
+    width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Botones de navegación más chicos */
+.carouselWrapper .carousel-control-prev-icon,
+.carouselWrapper .carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+}
+
+.tituloGaleriaImagenes {
+ color: hwb(60 54% 3%); 
+ font-size: 2.5rem;
+ padding: 20px;
+ text-align: center;
+}
+
+/*Encontranos*/
+
+.mapaTexto {
+  display: flex;
+  gap: 2rem; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.mapaTexto iframe {
+  flex: 1 1 50%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.mapaTexto p {
+  flex: 1 1 40%;
+  font-size: 2rem;
+  line-height: 1.6;
+   background-color: rgba(245, 245, 220, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  
+}
+.textoBoedo {
+   color:#00135E;
+ font-size: 2.5rem;
+ padding: 20px;
+ text-align: center;
+ font-weight: bold;
+}
+
+.estamosAqui {
+   color: #0d1b86;
+  font-size: 3rem;
+  
+}
+
+/* Responsive para .contactoContenedor */
+@media (max-width: 768px) {
+  .contactoContenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario,
+  .textoLateralContacto {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive para .carouselContenedor */
+@media (max-width: 768px) {
+  .carouselContenedor {
+    max-width: 100%;
+  }
+
+  .carouselContenedor img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
