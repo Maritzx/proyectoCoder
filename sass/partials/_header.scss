@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+header {
+  background-color: $color-negro;
+
+  .headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .logo {
+    width: 10%;
+    height: auto;
+    border-radius: 10%;
+    margin: 0 30px;
+  }
+
+  .logoLetras {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10px;
+  }
+
+  .tituloPrincipal {
+    color: $color-azul-oscuro;
+    margin-left: 1rem;
+    font-size: $titulo-xl;
+    flex-grow: 1;
+    font-weight: bolder;
+  }
+.navbar-nav {
+  .nav-link {
+    color: $color-azul-oscuro;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-amarillo;
+    }
+
+    &.active {
+      color: $color-azul-oscuro;
+
+      &:hover {
+        color: $color-amarillo;
+      }
+    }
+  }
+}
+
+  .navegadores {
+    .enlaces {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+      margin: 0;
+
+      li a {
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        color: $color-amarillo;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 8px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

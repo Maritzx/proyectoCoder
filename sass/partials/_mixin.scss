@@ -1,0 +1,4 @@
+//mixin
+@mixin sombra-texto($color, $x: 1px, $y: 1px, $blur: 2px) {
+  text-shadow: $x $y $blur $color;
+}

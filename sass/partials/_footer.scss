@@ -1,0 +1,27 @@
+@use 'variables';
+
+footer {
+  background-color: variables.$color-negro;
+  padding: 2rem;
+  color: variables.$color-fucsia;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+
+  .redesSociales {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .iconoRedSocial {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

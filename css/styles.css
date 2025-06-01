@@ -1,243 +1,186 @@
-
-/*REset*/
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-/* Paleta de colores Bocanada 
-
-Fucsia base	
-#f84ca2
-Amarillo humo	
-#fcee6e
-Azul eléctrico	
-#24ccf3
-Azul oscuro (ropa)	
-#0d1b86
-Cian intermedio	
-#1a80c7
- */
-  
-
-  body {
-    font-family: "Merriweather Sans", sans-serif;
-    background-image: url(../images/cerati1.JPG);
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    color: #111;
-    font-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    background-color:  #f84ca2;
-    
-  }
-  
-  /* Header */
-  header {
-    background-color: black;
-   
-  
-  }
-  
-  .logo {
-   width: 10%;
-   height: auto;
-   border-radius: 10%;
-   margin: 0 30px 0px 30px;
-   
-  }
-  
-  h1 {
-    font-size: 60px;
-    text-align: center;
-    font-weight: 200px;
-  }
-  
-  /* Navegación */
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    text-shadow: 1px 1px 2px #4e6b5e;
-   
-  }
-  
-
-  
-  
-  
-  
-  /* Footer */
-  footer {
-    background-color: black;
-    padding: 2rem;
-    color: #f73cb6;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0%;
-  }
-
-  /*Clases generales*/
-
-/*iconos de redes sociales*/
-
-.redesSociales  {
-display: flex;
-justify-content: center;
-gap: 1rem;
-  
- 
-  
-
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  color: #111;
+  background: #f84ca2 url("../images/cerati1.JPG") no-repeat center/cover;
 }
-  .iconoRedSocial {
-    display: flex;
-   justify-content: space-around;
-   align-items: end;
-    width: 50px;
-    height: auto;
-    
-  }
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  text-shadow: 1px 1px 2px #4e6b5e;
+}
+
+p {
+  font-size: larger;
+  font-weight: bold;
+  color: #000;
+}
+
+h1 {
+  justify-content: center;
+}
+
+h2 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #0d1b86;
+  background-color: rgba(245, 245, 220, 0.85);
+  text-transform: uppercase;
+}
 
 .tituloSeccion {
-
   font-size: 2rem;
   text-align: center;
-  color: hwb(60 54% 3%); /* beige claro */
- 
-}
-.tituloSubseccion {
-  color: #00135E;
-  background-color: rgba(245, 245, 220, 0.85);
-  box-shadow: 0 0 10px black;
-  
+  color: #0d1b86;
 }
 
-    .destacado {
-      color: #FFB000;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 1);
-     
-    }
-    
-
-    .imagenTeatro {
-      height: 400px;
-      width:auto
-    }
- .enlaces {
-  display: flex;
-  flex: auto;
-  justify-content: space-around;
-  margin: 0%;
-  box-sizing: border-box;
-  
+.tituloBase, .tituloEventos, .tituloSeccion {
+  text-align: center;
+  color: #0d1b86;
 }
 
-  .encabezado {
-    background-color: #4e6b5e;
-    padding: 1rem;
-    color: white;
+.tituloSeccion {
+  font-size: 2rem;
 }
-.headerTop {
+
+.tituloEventos {
+  font-size: 3rem;
+  color: #0d1b86;
+}
+
+header {
+  background-color: #000;
+}
+header .headerTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
 }
-/* Encabezado y títulos */
-.tituloPrincipal {
+header .logo {
+  width: 10%;
+  height: auto;
+  border-radius: 10%;
+  margin: 0 30px;
+}
+header .logoLetras {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
+}
+header .tituloPrincipal {
   color: #0d1b86;
   margin-left: 1rem;
   font-size: 3rem;
   flex-grow: 1;
   font-weight: bolder;
-  
-  
 }
-
-.navegadores .enlaces {
+header .navbar-nav .nav-link {
+  color: #0d1b86;
+  transition: color 0.3s ease;
+}
+header .navbar-nav .nav-link:hover {
+  color: #fcee6e;
+}
+header .navbar-nav .nav-link.active {
+  color: #0d1b86;
+}
+header .navbar-nav .nav-link.active:hover {
+  color: #fcee6e;
+}
+header .navegadores .enlaces {
   list-style: none;
-display: flex;
-gap: 1rem;
-padding:  0.5rem 1rem;;
-margin: 0;
-background-color: transparent;
-
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
 }
-/* Enlaces del nav */
-.navegadores .enlaces li a {
+header .navegadores .enlaces li a {
   display: block;
   justify-content: space-around;
   align-items: center;
-  color:  #fcee6e; /* amarillo humo */
+  color: #fcee6e;
   text-decoration: none;
   font-weight: bold;
-  margin-right: 20px;
   text-transform: uppercase;
   border-radius: 8px;
-  
+  margin-right: 20px;
 }
 
-.logoLetras {
-  width:300px;
-  height: auto;
+footer {
+  background-color: #000;
+  padding: 2rem;
+  color: #f84ca2;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+}
+footer .redesSociales {
   display: flex;
-  justify-content:space-around;
-  margin-left: 10px;
-  margin-right: 10px;
-
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+footer .iconoRedSocial {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+footer .iconoRedSocial:hover {
+  transform: scale(1.1);
 }
 
-.infoBocannada a {
-  color: #f73cb6;
-  margin: 0;
+/* Títulos principales */
+.tituloPrincipal {
+  color: #0d1b86;
+  margin-left: 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+}
 
-}
-h4 {
-  margin: 20px;
-}
-.quienesSomos, .nuestraMision {
-  background-color: rgba(245, 245, 220, 0.85);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
- h1, h2, h3 {
+.tituloSeccion {
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(245, 245, 220, 0.85);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  
 }
 
+.encabezadoSubtitulo {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: #fcee6e;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* "¿Quiénes Somos?" */
 .gridInicio {
- 
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto 1fr 1fr;
-  grid-template-areas:
-    "titulo parrafo imagen1"
-    "imagen2 parrafo imagen1"
-    "imagen2 parrafo imagen1";
+  grid-template-areas: "titulo parrafo imagen1" "imagen2 parrafo imagen1" "imagen2 parrafo imagen1";
   gap: 1rem;
   max-width: 1800px;
   margin: 2rem auto;
   padding: 1rem;
   align-items: start;
-  border: 2px solid yellow;
   height: auto;
   min-height: 400px;
   width: 100%;
- background-color: rgba(245, 245, 220, 0.85);
- box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: rgba(245, 245, 220, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .tituloGrid {
@@ -251,156 +194,151 @@ h4 {
 
 .parrafoQuienes {
   grid-area: parrafo;
-
-   background-color: rgba(245, 245, 220, 0.85);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  
-}
-
-.imagen1 {
-  grid-area: imagen1;
-  background-image: url('../images/imagenClub.jfif');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  min-height: 100%;
-
-}
-
-.imagen2 {
-  grid-area: imagen2;
-  background-image: url('../images/terraza.webp');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  min-height: 100%;
-}
-
-/* Responsive para celulares */
-@media (max-width: 768px) {
-  .gridInicio {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "titulo"
-      "parrafo"
-      "imagen2"
-      "imagen1";
-  }
-
-  .imagen1, .imagen2 {
-    min-height: 200px;
-  }
-   .parrafoQuienes {
-     background-color: rgba(245, 245, 220, 0.85);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  
-  }
-}
-
-
-/* contactoo*/
-.formulario{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
-  background-color:rgba(255, 255, 255, 0.85) ;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.campo {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color:#0d1b86;
-}
-
-input, textarea {
-  padding:0.5rem;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 0.75rem;
-  background-color: #f84ca2;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  
-}
-button:hover {
-  background-color: #c23d85;
-}
-
-.parrafoContacto {
   background-color: rgba(245, 245, 220, 0.85);
   padding: 1.5rem;
   border-radius: 12px;
   margin: 1rem auto;
   max-width: 900px;
   line-height: 1.6;
-  font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-  
-  
+.imagen1 {
+  grid-area: imagen1;
+  background-image: url("../images/imagenClub.jfif");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  min-height: 100%;
+}
 
-.encabezadoSubtitulo {
-font-size: larger;
-font-weight: bold;
-display: flex;
-justify-content:center;
-font-size: 2rem;
-color: #fcee6e;
+.imagen2 {
+  grid-area: imagen2;
+  background-image: url("../images/terraza.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  min-height: 100%;
+}
+
+/* Sección Nuestra Misión */
+.nuestraMision {
+  background-color: rgba(245, 245, 220, 0.85);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gridInicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "titulo" "parrafo" "imagen2" "imagen1";
+  }
+  .imagen1,
+  .imagen2 {
+    min-height: 200px;
+  }
+  .parrafoQuienes {
+    font-size: 1.2rem;
+  }
+  .tituloPrincipal {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+.seccionEvento {
+  background-color: rgba(245, 245, 220, 0.85);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tituloSeccion,
+.tituloSubseccion {
+  text-align: center;
+  color: #0d1b86;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.tituloSeccion {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0d1b86;
+}
+
+.tituloSubseccion {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0d1b86;
+  background-color: rgba(245, 245, 220, 0.85);
+  text-transform: uppercase;
+}
+
+.articuloEvento {
+  margin-bottom: 2rem;
+}
+
+.parrafoEvento {
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.carouselWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.galeriaVideos {
+  margin-top: 2rem;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.videoItem iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
 }
 
 /* Página de talleres */
-
-/* Contenedor principal de Grid */
-
 .gridContainer {
   display: grid;
-  grid-template-columns:repeat(3 , 1fr) ;/* 3 columnas iguales*/
-  grid-template-rows: repeat(2, 300px); /* Dos filas */
-  grid-template-areas:
-    "huerta planificacion banner"
-    "carpinteria teatro banner";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: "huerta planificacion banner" "carpinteria teatro banner";
   gap: 20px;
   width: 90%;
-  margin: 20px;
- 
-  
+  margin: 20px auto;
 }
 
-/* defino las areas */
+/* Defino las áreas */
 .huerta {
   grid-area: huerta;
-  background-image: url('../images/huertaUrbana.jpg');
+  background-image: url("../images/huertaUrbana.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -413,21 +351,20 @@ color: #fcee6e;
 
 .planificacion {
   grid-area: planificacion;
-  background-image: url('../images/planificacionHuerta.jpg');
+  background-image: url("../images/planificacionHuerta.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   width: 100%;
   height: 100%;
-   position: relative;
+  position: relative;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
 
-
 .carpinteria {
   grid-area: carpinteria;
-  background-image: url('../images/carpinteria.jpg');
+  background-image: url("../images/carpinteria.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -437,13 +374,12 @@ color: #fcee6e;
 
 .teatro {
   grid-area: teatro;
-  background-image: url('../images/teatro.jpg');
+  background-image: url("../images/teatro.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   width: 100%;
   height: 100%;
-
 }
 
 /* Banner ocupa toda la altura a la derecha */
@@ -458,21 +394,19 @@ color: #fcee6e;
 .bannerFull {
   width: 100%;
   height: 100%;
-  background-image: url('../images/bannerClickme2.jpg');
+  background-image: url("../images/bannerClickme2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  
 }
 
 .bannerFull:hover {
   transform: scale(1.02);
 }
 
-
-.textoCard { 
+.textoCard {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -480,25 +414,15 @@ color: #fcee6e;
   text-align: end;
   color: #0d1b86;
   text-transform: uppercase;
- 
   padding: 1rem;
-
-  
- 
 }
 
+/* Mobile */
 @media (max-width: 576px) {
   .gridContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "huerta"
-      "planificacion"
-      "carpinteria"
-      "teatro"
-      "banner";
+    grid-template-areas: "huerta" "planificacion" "carpinteria" "teatro" "banner";
   }
-
   .huerta,
   .planificacion,
   .carpinteria,
@@ -507,230 +431,168 @@ color: #fcee6e;
     width: 100%;
     height: 250px;
   }
-
   .bannerFull {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
-
   .textoCard {
     font-size: 1rem;
     padding: 1rem;
     text-align: center;
   }
 }
-
-
-/* eventos */
-.tituloEventos {
-  color: #0d1b86;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.seccionEvento {
-  background-color: rgba(245, 245, 220, 0.85); 
+main {
   padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 12px;
-  max-width: 1000px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.articuloEvento h2 {
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.seccionEncontranos {
+  background-color: rgba(245, 245, 220, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.seccionEncontranos h2 {
   font-size: 2rem;
-  color: #fcee6e; /* Amarillo humo */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  color: #0d1b86;
   margin-bottom: 1rem;
 }
 
-.parrafoEvento {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  text-align: justify;
+.seccionEncontranos p {
+  font-size: 1rem;
   color: #111;
-  font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.2);
-  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* videos responsive 2x2 */
-.videoGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  padding: 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.videoItem {
-  aspect-ratio: 16 / 9;
-  position: relative;
+.mapa {
   width: 100%;
-}
-
-.videoItem iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  height: 400px;
   border: none;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Una sola columna en pantallas mobile*/
-@media (max-width: 768px) {
-  .videoGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-h2 {
-   color: hwb(60 54% 3%); /* beige claro */
-  text-shadow:#00135E 10px 0 20px;
-}
-
-
-.carouselWrapper {
-  max-width: 600px;     
-  margin: 2rem auto;         
-  overflow: hidden;      
-}
-
-
-  .carouselWrapper .carousel-inner img {
-    width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Botones de navegación más chicos */
-.carouselWrapper .carousel-control-prev-icon,
-.carouselWrapper .carousel-control-next-icon {
-  width: 30px;
-  height: 30px;
-  background-size: 100% 100%;
-}
-
-.tituloGaleriaImagenes {
- color: hwb(60 54% 3%); 
- font-size: 2.5rem;
- padding: 20px;
- text-align: center;
-}
-
-/*Encontranos*/
-
-.mapaTexto {
-  display: flex;
-  gap: 2rem; 
-  align-items: flex-start; 
-  flex-wrap: wrap; 
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-.mapaTexto iframe {
-  flex: 1 1 50%;
+.formulario {
   max-width: 600px;
-  height: 400px;
-}
-
-.mapaTexto p {
-  flex: 1 1 40%;
-  font-size: 2rem;
-  line-height: 1.6;
-   background-color: rgba(245, 245, 220, 0.85);
+  margin: 2rem auto;
+  background-color: rgba(245, 245, 220, 0.85);
   padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  
-}
-.textoBoedo {
-   color:#00135E;
- font-size: 2.5rem;
- padding: 20px;
- text-align: center;
- font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.estamosAqui {
-   color: #0d1b86;
-  font-size: 3rem;
-  
+.formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-/* Responsive para .contactoContenedor */
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #111;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.formulario button {
+  background-color: #0d1b86;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.formulario button:hover {
+  background-color: #24ccf3;
+}
+
+.parrafoContacto {
+  background-color: rgba(245, 245, 220, 0.85);
+  border-radius: 5px;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
-  .contactoContenedor {
+  header .headerTop {
     flex-direction: column;
     align-items: center;
   }
-
-  .formulario,
-  .textoLateralContacto {
-    width: 100%;
-    max-width: 100%;
+  header .logo {
+    width: 30%;
+    margin: 1rem auto;
   }
-}
-
-/* Responsive para .carouselContenedor */
-@media (max-width: 768px) {
-  .carouselContenedor {
-    max-width: 100%;
+  header .logoLetras {
+    width: 70%;
+    margin: 1rem auto;
   }
-
-  .carouselContenedor img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 768px) {
-  .headerTop {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    text-align: center;
-  }
-
-  .logo {
-    width: 40%;
-    margin: 0 auto;
-  }
-
-  .logoLetras {
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-  }
-
   .tituloPrincipal {
     font-size: 2rem;
-    margin: 0.5rem 0;
     text-align: center;
   }
-
   .navegadores .enlaces {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding: 0;
   }
-
-  .navegadores .enlaces li a {
-    font-size: 1rem;
-    margin: 0;
+  body {
+    font-size: 16px;
+  }
+  footer {
+    padding: 1rem;
+  }
+  .tituloEventos {
+    font-size: 2rem;
+  }
+  .seccionEvento {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .mapa {
+    height: 300px;
+  }
+  .galeria {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+  .contenedorTalleres {
+    display: flex;
+    flex-direction: column;
+  }
+  .taller {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .bannerTalleres {
+    display: none;
   }
 }
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,76 @@
+@use "variables" as *;
+
+@media (max-width: 768px) {
+  // HEADER
+  header .headerTop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo {
+    width: 30%;
+    margin: 1rem auto;
+  }
+
+  header .logoLetras {
+    width: 70%;
+    margin: 1rem auto;
+  }
+
+  .tituloPrincipal {
+    font-size: $titulo-lg;
+    text-align: center;
+  }
+
+  .navegadores .enlaces {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // BODY
+  body {
+    font-size: 16px;
+  }
+
+  // FOOTER
+  footer {
+    padding: 1rem;
+  }
+
+  // EVENTOS
+  .tituloEventos {
+    font-size: $titulo-lg;
+  }
+
+  .seccionEvento {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  // MAPA
+  .mapa {
+    height: 300px;
+  }
+
+  // GALERÍA
+  .galeria {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  // TALLERES
+  .contenedorTalleres {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .taller {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .bannerTalleres {
+    display: none;
+  }
+}
