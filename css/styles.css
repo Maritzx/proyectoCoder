@@ -89,6 +89,7 @@ header .tituloPrincipal {
 header .navbar-nav .nav-link {
   color: #0d1b86;
   transition: color 0.3s ease;
+  font-size: 20px;
 }
 header .navbar-nav .nav-link:hover {
   color: #fcee6e;
@@ -202,6 +203,9 @@ footer .iconoRedSocial:hover {
   line-height: 1.6;
   font-size: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: larger;
+  font-weight: bold;
+  color: #000;
 }
 
 .imagen1 {
