@@ -28,9 +28,11 @@
   padding-bottom: 56.25%; // proporción 16:9
   height: 0;
   overflow: hidden;
-  margin-bottom: 2rem;
+ margin: 2rem auto 2rem auto;
   border-radius: $radio-borde;
   box-shadow: $sombra;
+  max-width: 90%;
+  
 
   iframe {
     position: absolute;
