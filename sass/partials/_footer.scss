@@ -3,16 +3,27 @@
 footer {
   background-color: variables.$color-negro;
   padding: 2rem;
+
   color: variables.$color-fucsia;
   text-transform: uppercase;
   text-align: center;
   margin-top: 2rem;
 
+ 
+  a[href^="mailto:"] {
+    color: variables.$color-fucsia !important;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .redesSociales {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .iconoRedSocial {

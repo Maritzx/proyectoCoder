@@ -1,44 +1,50 @@
 @use "variables" as *;
 
 @media (max-width: 768px) {
-  // HEADER
-  header .headerTop {
-    flex-direction: column;
-    align-items: center;
+  /* HEADER */
+  header {
+    .headerTop {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      width: 30%;
+      margin: 1rem auto;
+    }
+
+    .logoLetras {
+      width: 70%;
+      margin: 1rem auto;
+    }
   }
 
-  header .logo {
-    width: 30%;
-    margin: 1rem auto;
-  }
-
-  header .logoLetras {
-    width: 70%;
-    margin: 1rem auto;
-  }
-
+  /* TÍTULO PRINCIPAL */
   .tituloPrincipal {
     font-size: $titulo-lg;
     text-align: center;
   }
 
-  .navegadores .enlaces {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+  /* NAVEGADORES */
+  .navegadores {
+    .enlaces {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 
-  // BODY
+  /* BODY */
   body {
     font-size: 16px;
   }
 
-  // FOOTER
+  /* FOOTER */
   footer {
     padding: 1rem;
   }
 
-  // EVENTOS
+  /* EVENTOS */
   .tituloEventos {
     font-size: $titulo-lg;
   }
@@ -48,26 +54,26 @@
     margin: 1rem;
   }
 
-  // MAPA
+  /* MAPA */
   .mapa {
     height: 300px;
   }
 
-  // GALERÍA
+  /* GALERÍA */
   .galeria {
     grid-template-columns: 1fr !important;
     gap: 1rem;
   }
 
-  // TALLERES
+  /* TALLERES */
   .contenedorTalleres {
     display: flex;
     flex-direction: column;
-  }
 
-  .taller {
-    width: 100%;
-    margin-bottom: 1rem;
+    .taller {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   .bannerTalleres {

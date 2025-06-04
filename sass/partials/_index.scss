@@ -1,128 +1,139 @@
 @use "variables" as *;
 
-/* Títulos principales */
-.tituloPrincipal {
-  color: $color-azul-oscuro;
-  margin-left: 1rem;
-  font-size: 3rem;
-  font-weight: bolder;
-}
 
-.tituloSeccion {
-  font-size: 2rem;
-  text-align: center;
-  color: $color-beige;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.encabezadoSubtitulo {
-  font-size: 2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  color: $color-amarillo;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* "¿Quiénes Somos?" */
-.gridInicio {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
-  grid-template-areas:
-    "titulo parrafo imagen1"
-    "imagen2 parrafo imagen1"
-    "imagen2 parrafo imagen1";
-  gap: 1rem;
-  max-width: 1800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  align-items: start;
-  height: auto;
-  min-height: 400px;
-  width: 100%;
-  background-color: rgba(245, 245, 220, 0.85);
-  box-shadow: $sombra;
-}
-
-.tituloGrid {
-  grid-area: titulo;
-  font-size: 3rem;
-  font-weight: bold;
-  color: $color-azul-oscuro;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-}
-
-.parrafoQuienes {
-  grid-area: parrafo;
-  background-color: rgba(245, 245, 220, 0.85);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  box-shadow: $sombra;
-   font-size: larger;
-  font-weight: bold;
-  color: $color-negro;
-}
-
-.imagen1 {
-  grid-area: imagen1;
-  background-image: url("../images/imagenClub.jfif");
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  min-height: 100%;
-}
-
-.imagen2 {
-  grid-area: imagen2;
-  background-image: url("../images/terraza.webp");
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  min-height: 100%;
-}
-
-/* Sección Nuestra Misión */
-.nuestraMision {
-  background-color: rgba(245, 245, 220, 0.85);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin: 1rem auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.5rem;
-  box-shadow: $sombra;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .gridInicio {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "titulo"
-      "parrafo"
-      "imagen2"
-      "imagen1";
-  }
-
-  .imagen1,
-  .imagen2 {
-    min-height: 200px;
-  }
-
-  .parrafoQuienes {
-    font-size: 1.2rem;
-  }
-
+body {
+  /* Títulos principales */
   .tituloPrincipal {
+    color: $color-azul-oscuro;  
+    margin-left: 1rem;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+  .tituloSeccion {
     font-size: 2rem;
     text-align: center;
-    margin: 0.5rem 0;
+    color: $color-azul-oscuro;  
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   }
+
+  .encabezadoSubtitulo {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: $color-amarillo;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* “¿Quiénes Somos?” */
+  .gridInicio {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+      "titulo parrafo imagen1"
+      "imagen2 parrafo imagen1"
+      "imagen2 parrafo imagen1";
+    gap: 1rem;
+    max-width: 1800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    align-items: start;
+    height: auto;
+    min-height: 400px;
+    width: 100%;
+    background-color: rgba(245, 245, 220, 0.85);
+    box-shadow: $sombra;
+
+    
+    .tituloGrid {
+      grid-area: titulo;
+      font-size: 3rem;
+      font-weight: bold;
+      color: $color-azul-oscuro;   
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+    }
+
+    .parrafoQuienes {
+      grid-area: parrafo;
+      background-color: rgba(245, 245, 220, 0.85);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 1rem auto;
+      max-width: 900px;
+      line-height: 1.6;
+      font-size: 1.5rem;
+      box-shadow: $sombra;
+      font-size: larger;
+      font-weight: bold;
+      color: $color-negro;
+    }
+
+    .imagen1 {
+      grid-area: imagen1;
+      background-image: url("../images/imagenClub.jfif");
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      min-height: 100%;
+    }
+
+    .imagen2 {
+      grid-area: imagen2;
+      background-image: url("../images/terraza.webp");
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      min-height: 100%;
+    }
+  }
+
+  /* Sección “Nuestra Misión” */
+  .nuestraMision {
+    background-color: rgba(245, 245, 220, 0.85);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1rem auto;
+    max-width: 900px;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    box-shadow: $sombra;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    .gridInicio {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "titulo"
+        "parrafo"
+        "imagen2"
+        "imagen1";
+
+      .imagen1,
+      .imagen2 {
+        min-height: 200px;
+      }
+
+      .parrafoQuienes {
+        font-size: 1.2rem;
+      }
+    }
+
+    .tituloPrincipal {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0.5rem 0;
+      color: $color-azul-oscuro; 
+    }
+
+    .tituloSeccion {
+      color: $color-azul-oscuro; 
+  }
+}
 }

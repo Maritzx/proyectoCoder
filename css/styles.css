@@ -11,35 +11,25 @@ body {
   color: #111;
   background: #f84ca2 url("../images/cerati1.JPG") no-repeat center/cover;
 }
-
-a {
+body a {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   text-shadow: 1px 1px 2px #4e6b5e;
 }
-
-p {
+body p {
   font-size: larger;
   font-weight: bold;
   color: #000;
 }
-
-h1 {
+body h1 {
   justify-content: center;
 }
-
-h2 {
+body h2 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   color: #0d1b86;
   background-color: rgba(245, 245, 220, 0.85);
   text-transform: uppercase;
-}
-
-.tituloSeccion {
-  font-size: 2rem;
-  text-align: center;
-  color: #0d1b86;
 }
 
 .tituloBase, .tituloEventos, .tituloSeccion {
@@ -56,6 +46,17 @@ h2 {
   color: #0d1b86;
 }
 
+@keyframes moverLogo {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 header {
   background-color: #000;
 }
@@ -71,6 +72,7 @@ header .logo {
   height: auto;
   border-radius: 10%;
   margin: 0 30px;
+  animation: moverLogo 2s ease-in-out;
 }
 header .logoLetras {
   width: 300px;
@@ -127,11 +129,18 @@ footer {
   text-align: center;
   margin-top: 2rem;
 }
+footer a[href^="mailto:"] {
+  color: #f84ca2 !important;
+  text-decoration: none;
+}
+footer a[href^="mailto:"]:hover {
+  text-decoration: underline;
+}
 footer .redesSociales {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 footer .iconoRedSocial {
   width: 50px;
@@ -142,22 +151,20 @@ footer .iconoRedSocial:hover {
   transform: scale(1.1);
 }
 
-/* Títulos principales */
-.tituloPrincipal {
+
+body .tituloPrincipal {
   color: #0d1b86;
   margin-left: 1rem;
   font-size: 3rem;
   font-weight: bolder;
 }
-
-.tituloSeccion {
+body .tituloSeccion {
   font-size: 2rem;
   text-align: center;
-  color: rgba(245, 245, 220, 0.85);
+  color: #0d1b86;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-
-.encabezadoSubtitulo {
+body .encabezadoSubtitulo {
   font-size: 2rem;
   font-weight: bold;
   display: flex;
@@ -165,9 +172,7 @@ footer .iconoRedSocial:hover {
   color: #fcee6e;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
-
-/* "¿Quiénes Somos?" */
-.gridInicio {
+body .gridInicio {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto 1fr 1fr;
@@ -183,8 +188,7 @@ footer .iconoRedSocial:hover {
   background-color: rgba(245, 245, 220, 0.85);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-.tituloGrid {
+body .gridInicio .tituloGrid {
   grid-area: titulo;
   font-size: 3rem;
   font-weight: bold;
@@ -192,8 +196,7 @@ footer .iconoRedSocial:hover {
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
-
-.parrafoQuienes {
+body .gridInicio .parrafoQuienes {
   grid-area: parrafo;
   background-color: rgba(245, 245, 220, 0.85);
   padding: 1.5rem;
@@ -207,8 +210,7 @@ footer .iconoRedSocial:hover {
   font-weight: bold;
   color: #000;
 }
-
-.imagen1 {
+body .gridInicio .imagen1 {
   grid-area: imagen1;
   background-image: url("../images/imagenClub.jfif");
   background-size: cover;
@@ -216,8 +218,7 @@ footer .iconoRedSocial:hover {
   border-radius: 10px;
   min-height: 100%;
 }
-
-.imagen2 {
+body .gridInicio .imagen2 {
   grid-area: imagen2;
   background-image: url("../images/terraza.webp");
   background-size: cover;
@@ -225,9 +226,7 @@ footer .iconoRedSocial:hover {
   border-radius: 10px;
   min-height: 100%;
 }
-
-/* Sección Nuestra Misión */
-.nuestraMision {
+body .nuestraMision {
   background-color: rgba(245, 245, 220, 0.85);
   padding: 1.5rem;
   border-radius: 12px;
@@ -238,24 +237,27 @@ footer .iconoRedSocial:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .gridInicio {
+  body .gridInicio {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: "titulo" "parrafo" "imagen2" "imagen1";
   }
-  .imagen1,
-  .imagen2 {
+  body .gridInicio .imagen1,
+  body .gridInicio .imagen2 {
     min-height: 200px;
   }
-  .parrafoQuienes {
+  body .gridInicio .parrafoQuienes {
     font-size: 1.2rem;
   }
-  .tituloPrincipal {
+  body .tituloPrincipal {
     font-size: 2rem;
     text-align: center;
     margin: 0.5rem 0;
+    color: #0d1b86;
+  }
+  body .tituloSeccion {
+    color: #0d1b86;
   }
 }
 .seccionEvento {
@@ -266,33 +268,26 @@ footer .iconoRedSocial:hover {
   max-width: 1000px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-.tituloSeccion,
-.tituloSubseccion {
+.seccionEvento .tituloSeccion,
+.seccionEvento .tituloSubseccion {
   text-align: center;
   color: #0d1b86;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
-.tituloSeccion {
+.seccionEvento .tituloSeccion {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #0d1b86;
 }
-
-.tituloSubseccion {
+.seccionEvento .tituloSubseccion {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #0d1b86;
   background-color: rgba(245, 245, 220, 0.85);
   text-transform: uppercase;
 }
-
-.articuloEvento {
+.seccionEvento .articuloEvento {
   margin-bottom: 2rem;
 }
-
-.parrafoEvento {
+.seccionEvento .articuloEvento .parrafoEvento {
   font-size: 1rem;
   color: #111;
   margin-bottom: 1rem;
@@ -302,33 +297,28 @@ footer .iconoRedSocial:hover {
   max-width: 800px;
   margin: 0 auto;
 }
-
-.carousel-item img {
+.carouselWrapper .carousel-item img {
   border-radius: 10px;
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .galeriaVideos {
   margin-top: 2rem;
 }
-
-.videoGrid {
+.galeriaVideos .videoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-
-.videoItem iframe {
+.galeriaVideos .videoItem iframe {
   width: 100%;
   height: 250px;
   border: none;
   border-radius: 10px;
 }
 
-/* Página de talleres */
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -337,10 +327,13 @@ footer .iconoRedSocial:hover {
   gap: 20px;
   width: 90%;
   margin: 20px auto;
+  /* Área “Huerta” */
+  /* Área “Planificación” */
+  /* Área “Carpintería” */
+  /* Área “Teatro” */
+  /* Banner ocupa toda la columna derecha */
 }
-
-/* Defino las áreas */
-.huerta {
+.gridContainer .huerta {
   grid-area: huerta;
   background-image: url("../images/huertaUrbana.jpg");
   background-size: cover;
@@ -352,8 +345,7 @@ footer .iconoRedSocial:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
-
-.planificacion {
+.gridContainer .planificacion {
   grid-area: planificacion;
   background-image: url("../images/planificacionHuerta.jpg");
   background-size: cover;
@@ -365,8 +357,7 @@ footer .iconoRedSocial:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
-
-.carpinteria {
+.gridContainer .carpinteria {
   grid-area: carpinteria;
   background-image: url("../images/carpinteria.jpg");
   background-size: cover;
@@ -375,8 +366,7 @@ footer .iconoRedSocial:hover {
   width: 100%;
   height: 100%;
 }
-
-.teatro {
+.gridContainer .teatro {
   grid-area: teatro;
   background-image: url("../images/teatro.jpg");
   background-size: cover;
@@ -385,17 +375,14 @@ footer .iconoRedSocial:hover {
   width: 100%;
   height: 100%;
 }
-
-/* Banner ocupa toda la altura a la derecha */
-.bannerLink {
+.gridContainer .bannerLink {
   grid-area: banner;
   display: block;
   width: 100%;
   height: 100%;
   text-decoration: none;
 }
-
-.bannerFull {
+.gridContainer .bannerFull {
   width: 100%;
   height: 100%;
   background-image: url("../images/bannerClickme2.jpg");
@@ -405,12 +392,10 @@ footer .iconoRedSocial:hover {
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
-
-.bannerFull:hover {
+.gridContainer .bannerFull:hover {
   transform: scale(1.02);
 }
-
-.textoCard {
+.gridContainer .textoCard {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -421,27 +406,28 @@ footer .iconoRedSocial:hover {
   padding: 1rem;
 }
 
-/* Mobile */
+/* Mobile: nesting dentro del @media */
 @media (max-width: 576px) {
   .gridContainer {
     grid-template-columns: 1fr;
     grid-template-areas: "huerta" "planificacion" "carpinteria" "teatro" "banner";
+    /* Ajustes para cada área en mobile */
   }
-  .huerta,
-  .planificacion,
-  .carpinteria,
-  .teatro,
-  .bannerLink {
+  .gridContainer .huerta,
+  .gridContainer .planificacion,
+  .gridContainer .carpinteria,
+  .gridContainer .teatro,
+  .gridContainer .bannerLink {
     width: 100%;
     height: 250px;
   }
-  .bannerFull {
+  .gridContainer .bannerFull {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
-  .textoCard {
+  .gridContainer .textoCard {
     font-size: 1rem;
     padding: 1rem;
     text-align: center;
@@ -450,23 +436,20 @@ footer .iconoRedSocial:hover {
 main {
   padding: 2rem;
 }
-
-.galeria {
+main .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   padding: 2rem 0;
 }
-
-.galeria img {
+main .galeria img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
-
-.galeria img:hover {
+main .galeria img:hover {
   transform: scale(1.05);
 }
 
@@ -479,13 +462,11 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-
 .seccionEncontranos h2 {
   font-size: 2rem;
   color: #0d1b86;
   margin-bottom: 1rem;
 }
-
 .seccionEncontranos p {
   font-size: 1rem;
   color: #111;
@@ -497,7 +478,7 @@ main {
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   max-width: 90%;
@@ -525,13 +506,11 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .formulario label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
-
 .formulario input,
 .formulario textarea {
   width: 100%;
@@ -541,7 +520,6 @@ main {
   border-radius: 5px;
   font-size: 1rem;
 }
-
 .formulario button {
   background-color: #0d1b86;
   color: #fff;
@@ -556,6 +534,7 @@ main {
   background-color: #24ccf3;
 }
 
+/* Párrafo informativo de contacto */
 .parrafoContacto {
   background-color: rgba(245, 245, 220, 0.85);
   border-radius: 5px;
@@ -563,6 +542,7 @@ main {
 }
 
 @media (max-width: 768px) {
+  /* HEADER */
   header .headerTop {
     flex-direction: column;
     align-items: center;
@@ -575,21 +555,26 @@ main {
     width: 70%;
     margin: 1rem auto;
   }
+  /* TÍTULO PRINCIPAL */
   .tituloPrincipal {
     font-size: 2rem;
     text-align: center;
   }
+  /* NAVEGADORES */
   .navegadores .enlaces {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
+  /* BODY */
   body {
     font-size: 16px;
   }
+  /* FOOTER */
   footer {
     padding: 1rem;
   }
+  /* EVENTOS */
   .tituloEventos {
     font-size: 2rem;
   }
@@ -597,18 +582,21 @@ main {
     padding: 1rem;
     margin: 1rem;
   }
+  /* MAPA */
   .mapa {
     height: 300px;
   }
+  /* GALERÍA */
   .galeria {
     grid-template-columns: 1fr !important;
     gap: 1rem;
   }
+  /* TALLERES */
   .contenedorTalleres {
     display: flex;
     flex-direction: column;
   }
-  .taller {
+  .contenedorTalleres .taller {
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -616,4 +604,6 @@ main {
     display: none;
   }
 }
+
+
 /*# sourceMappingURL=styles.css.map */

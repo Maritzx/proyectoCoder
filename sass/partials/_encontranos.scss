@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+
 .seccionEncontranos {
   background-color: $color-beige;
   padding: 2rem;
@@ -8,18 +9,18 @@
   margin: 2rem auto;
   box-shadow: $sombra;
   text-align: center;
-}
 
-.seccionEncontranos h2 {
-  font-size: $titulo-lg;
-  color: $color-azul-oscuro;
-  margin-bottom: 1rem;
-}
+  h2 {
+    font-size: $titulo-lg;
+    color: $color-azul-oscuro;
+    margin-bottom: 1rem;
+  }
 
-.seccionEncontranos p {
-  font-size: 1rem;
-  color: $color-gris;
-  margin-bottom: 1.5rem;
+  p {
+    font-size: 1rem;
+    color: $color-gris;
+    margin-bottom: 1.5rem;
+  }
 }
 
 
@@ -28,11 +29,10 @@
   padding-bottom: 56.25%; // proporción 16:9
   height: 0;
   overflow: hidden;
- margin: 2rem auto 2rem auto;
+  margin: 2rem auto;
   border-radius: $radio-borde;
   box-shadow: $sombra;
   max-width: 90%;
-  
 
   iframe {
     position: absolute;

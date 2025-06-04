@@ -1,54 +1,41 @@
-@use "variables" as*;
+@use "variables" as *;
 @use "mixin" as *;
+
 body {
-    font-family: $fuente-principal;
-    font-size: 18px;
-    color: $color-gris; 
-    background: $color-fucsia url('../images/cerati1.JPG') no-repeat center/cover;
-}
+  font-family: $fuente-principal;
+  font-size: 18px;
+  color: $color-gris;
+  background: $color-fucsia url('../images/cerati1.JPG') no-repeat center/cover;
 
-a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-negro; 
-  @include sombra-texto(#4e6b5e);
-}
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-negro;
+    @include sombra-texto(#4e6b5e);
+  }
 
+  p {
+    font-size: larger;
+    font-weight: bold;
+    color: $color-negro;
+  }
 
-p {
-  font-size: larger;
-  font-weight: bold;
-  color: $color-negro;
-  
-   
-}
+  h1 {
+    justify-content: center;
+  }
 
-h1 {
-  justify-content: center;
-}
-
-
- h2  {
-  @include sombra-texto(rgba(0, 0, 0, 0.2), 1px, 1px, 3px);
-  color:$color-azul-oscuro;
-  background-color: rgba(245, 245, 220, 0.85);
-  text-transform: uppercase;
-  
-  
-}
-
-.tituloSeccion {
-  font-size: 2rem;
-  text-align: center;
-  color: $color-azul-oscuro;
- 
+  h2 {
+    @include sombra-texto(rgba(0, 0, 0, 0.2), 1px, 1px, 3px);
+    color: $color-azul-oscuro;
+    background-color: rgba(245, 245, 220, 0.85);
+    text-transform: uppercase;
+  }
 }
 
 .tituloBase {
   text-align: center;
   color: $color-azul-oscuro;
 }
-
 
 .tituloSeccion {
   @extend .tituloBase;

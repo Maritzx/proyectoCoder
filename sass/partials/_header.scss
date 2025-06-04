@@ -1,5 +1,18 @@
 @use 'variables' as *;
 
+// animacion para que se mueva el logo. 
+@keyframes moverLogo {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 header {
   background-color: $color-negro;
 
@@ -11,11 +24,14 @@ header {
     margin: 0;
   }
 
+  
   .logo {
     width: 10%;
     height: auto;
     border-radius: 10%;
     margin: 0 30px;
+
+    animation: moverLogo 2s ease-in-out;
   }
 
   .logoLetras {
@@ -33,25 +49,27 @@ header {
     flex-grow: 1;
     font-weight: bolder;
   }
-.navbar-nav {
-  .nav-link {
-    color: $color-azul-oscuro;
-    transition: color 0.3s ease;
-    font-size: 20px;
 
-    &:hover {
-      color: $color-amarillo;
-    }
-
-    &.active {
+  .navbar-nav {
+    .nav-link {
       color: $color-azul-oscuro;
-
+      transition: color 0.3s ease;
+      font-size: 20px;
+      
+//animacion para que cambie a color amarillo
       &:hover {
         color: $color-amarillo;
       }
+
+      &.active {
+        color: $color-azul-oscuro;
+
+        &:hover {
+          color: $color-amarillo;
+        }
+      }
     }
   }
-}
 
   .navegadores {
     .enlaces {

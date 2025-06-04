@@ -2,23 +2,23 @@
 
 main {
   padding: 2rem;
-}
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
 
-.galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: $radio-borde;
-  box-shadow: $sombra;
-  transition: transform 0.3s ease;
-}
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $radio-borde;
+      box-shadow: $sombra;
+      transition: transform 0.3s ease;
 
-.galeria img:hover {
-  transform: scale(1.05);
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
 }
