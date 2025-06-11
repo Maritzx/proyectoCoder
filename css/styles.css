@@ -127,7 +127,12 @@ footer {
   color: #f84ca2;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 2rem;
+}
+footer .parrafoFooter {
+  color: #f84ca2;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
 }
 footer a[href^="mailto:"] {
   color: #f84ca2 !important;
@@ -151,7 +156,11 @@ footer .iconoRedSocial:hover {
   transform: scale(1.1);
 }
 
-
+body {
+  /* Títulos principales */
+  /* “¿Quiénes Somos?” */
+  /* Sección “Nuestra Misión” */
+}
 body .tituloPrincipal {
   color: #0d1b86;
   margin-left: 1rem;
@@ -301,7 +310,8 @@ body .nuestraMision {
   border-radius: 10px;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .galeriaVideos {
@@ -604,6 +614,4 @@ main .galeria img:hover {
     display: none;
   }
 }
-
-
 /*# sourceMappingURL=styles.css.map */

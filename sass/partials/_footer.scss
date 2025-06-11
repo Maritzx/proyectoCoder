@@ -7,8 +7,13 @@ footer {
   color: variables.$color-fucsia;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 2rem;
-
+ 
+.parrafoFooter {
+  color: variables.$color-fucsia;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+}
  
   a[href^="mailto:"] {
     color: variables.$color-fucsia !important;
