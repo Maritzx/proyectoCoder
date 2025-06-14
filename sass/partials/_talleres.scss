@@ -97,38 +97,3 @@
   }
 }
 
-/* Mobile: nesting dentro del @media */
-@media (max-width: 576px) {
-  .gridContainer {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "huerta"
-      "planificacion"
-      "carpinteria"
-      "teatro"
-      "banner";
-
-    /* Ajustes para cada área en mobile */
-    .huerta,
-    .planificacion,
-    .carpinteria,
-    .teatro,
-    .bannerLink {
-      width: 100%;
-      height: 250px;
-    }
-
-    .bannerFull {
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .textoCard {
-      font-size: 1rem;
-      padding: 1rem;
-      text-align: center;
-    }
-  }
-}

@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+/* MOBILE === */
 @media (max-width: 768px) {
   /* HEADER */
   header {
@@ -78,5 +79,219 @@
 
   .bannerTalleres {
     display: none;
+  }
+}
+/* TABLET*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* INDEX - gridInicio */
+  .gridInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "titulo titulo"
+      "parrafo parrafo"
+      "imagen1 imagen2";
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .tituloGrid {
+    grid-area: titulo;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .parrafoQuienes {
+    grid-area: parrafo;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+  }
+
+  .imagen1 {
+    grid-area: imagen1;
+    height: 200px;
+    background-size: cover;
+  }
+
+  .imagen2 {
+    grid-area: imagen2;
+    height: 200px;
+    background-size: cover;
+  }
+
+  /* HEADER */
+  .headerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo,
+  .logoLetras {
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+    margin: 0.5rem 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  /* TEXTOS GENERALES */
+  .tituloPrincipal {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+    color: #1a1a1a;
+  }
+
+  .tituloSeccion,
+  .encabezadoSubtitulo {
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: #222;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .redesSociales {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .iconoRedSocial {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* CONTACTO */
+  .formulario {
+    max-width: 90%;
+    padding: 2rem;
+    margin: 2rem auto;
+    font-size: 1rem;
+
+    input,
+    textarea {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .parrafoContacto {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  /* TALLERES */
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas:
+      "huerta planificacion"
+      "carpinteria teatro"
+      "banner banner";
+    width: 95%;
+    gap: 1rem;
+  }
+
+  .huerta,
+  .planificacion,
+  .carpinteria,
+  .teatro,
+  .bannerLink {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bannerFull {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+
+  .textoCard {
+    font-size: 1.1rem;
+    text-align: end;
+    padding: 1rem;
+    color: #1a1a1a;
+  }
+}
+  /* ENCONTRANOS */
+  .seccionEncontranos {
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 90%;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .mapaTexto {
+    max-width: 100%;
+    margin: 2rem auto;
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+
+/* TALLERES MOBILE  */
+@media (max-width: 576px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "huerta"
+      "planificacion"
+      "carpinteria"
+      "teatro"
+      "banner";
+
+    .huerta,
+    .planificacion,
+    .carpinteria,
+    .teatro,
+    .bannerLink {
+      width: 100%;
+      height: 250px;
+    }
+
+    .bannerFull {
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .textoCard {
+      font-size: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
   }
 }
