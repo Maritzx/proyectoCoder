@@ -46,6 +46,11 @@ body h2 {
   color: #0d1b86;
 }
 
+.tituloSubseccion {
+  text-align: center;
+  color: #0d1b86;
+}
+
 @keyframes moverLogo {
   0% {
     transform: translateX(0);
